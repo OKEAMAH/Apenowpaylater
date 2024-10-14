@@ -1,0 +1,32 @@
+            - name: Docker Build Tag Publish to ECR
+  # You may pin to the exact commit or the version.
+  # uses: bitovi/github-actions-docker-ecr-publish@bcaf3fb11bafbc6ae884516e92f870ac11a5ae68
+  uses: bitovi/github-actions-docker-ecr-publish@v0.1.0
+  with:
+    # Checkout the repository
+    checkout: # optional, default is true
+    # Use action builtin login
+    aws_login: # optional, default is true
+    # AWS access key ID
+    aws_access_key_id: 
+    # AWS secret access key
+    aws_secret_access_key: 
+    # AWS session token
+    aws_session_token: # optional
+    # AWS default region
+    aws_default_region: # optional, default is us-east-1
+    # AWS ECR repository name. e.g. hello-repository
+    aws_ecr_repo_name: 
+    # Tag to override default Logic
+    image_tag: # optional, default is 
+    # Use the SHA for the tag.  Overrides the default logic.
+    use_sha: # optional
+    # Docker org name.
+    org_name: # optional, default is 
+    # Tag default branch with latest tag instead of branch name.
+    use_latest: # optional, default is true
+    # Add a string of values to the end of the build command
+    build_args: # optional
+    # Specify the working directory that the docker build will be run in
+    working_directory: # optional
+          
